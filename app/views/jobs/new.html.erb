@@ -1,6 +1,22 @@
-<%= simple_form_for Job.new do |f| %>
-  <%= f.input :title, label: "Job title" %>
-  <%= f.input :company, label: "Your company" %>
-  <%= f.input :url, label: "Link to job" %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4 center form-box">
+			<%= simple_form_for Job.new do |f| %>
+			 <div class="form-group">
+				<%= f.input :title, label: "Job title" %>
+			 </div>
+			
+			<div class="form-group">  
+				<%= f.input :company, label: "Your company" %>
+			 </div>
+			  
+			 <div class="form-group">
+				<%= f.input :url, label: "Link to job" %>
+			 </div>
+			  
+			 <%= f.button :submit, class: "btn btn-default" %>
+			
+			<% end %>
+		</div>
+	</div>
+</div>

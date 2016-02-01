@@ -1,12 +1,18 @@
 <h1>Jobs</h1>
-
-<% @jobs.each do |job| %>
-	<div class="job">
-		<h2><%= link_to job.title, job.url %></h2>
-		<p><%= job.company %></p>
+<div class="container-fluid">
+	<div>
+		<div class="panel-body">
+			<% @jobs.each do |job| %>
+				<div class="panel-heading">
+					<h2><%= link_to job.title, job.url %></h2>
+				</div>	
+					<p><%= job.company %></p>
+			<% end %>
+		</div>
 	</div>
-<% end %>	
-
-<p><%= link_to "Add a job", new_job_path %></p>
+</div>	
+<div class="panel-footer">
+	<p><%= link_to "Add a job", new_job_path %></p>
+</div>
 
 <p><%= paginate @jobs %></p>
